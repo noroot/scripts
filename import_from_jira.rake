@@ -117,7 +117,7 @@ namespace :redmine do
         if !u
           # Create a new user if not found
           mail = username[0,limit_for(User, 'mail')]
-          mail = "#{mail}@hqprogroup.com" unless mail.include?("@")
+          mail = "#{mail}@domain.com" unless mail.include?("@")
           firstname, lastname = fullname.split ' ', 2
           u = User.new :firstname => firstname[0,limit_for(User, 'firstname')],
           :lastname => lastname[0,limit_for(User, 'lastname')],
